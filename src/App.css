@@ -1,4 +1,6 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -6,18 +8,14 @@
 
 .App {
   height: 100vh;
-  margin: 0;
+
   color: white;
-  padding: 0;
-  box-sizing: border-box;
+
   padding: 64px;
   background-color: #0d0714;
-}
-
-.flex-col{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  @media screen and (max-width: 1024px) {
+    padding: 16px;
+  }
 }
 
 .todo-create {
@@ -26,6 +24,9 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 32px;
+  }
 }
 .todo-form {
   display: flex;
@@ -35,7 +36,7 @@
 }
 .todo-input {
   font-size: 16px;
-  width: 500px;
+  width: 100%;
   padding: 5px 20px;
   border: 2px solid #9e78cf;
   border-radius: 12px;
@@ -50,6 +51,13 @@
   background-color: #9e78cf;
   border-radius: 12px;
   cursor: pointer;
+  
+  @media screen and (max-width: 375px) {
+    padding: 16px;
+  }
+}
+.todo-btn:hover {
+  opacity: .8;
 }
 .todo-list {
   display: flex;
@@ -59,24 +67,48 @@
   font-size: 24px;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: 375px) {
+    width: auto;
+    font-size: 20px;
+    gap: 16px;
+  }
 }
 .todo-icons {
-  display: flex;
-  gap: 20px;
+display: flex;
+gap: 20px;
+@media screen and (max-width: 375px) {
+  gap: 8px;
+}
+}
+
+.done-icon, .delete-icon {
+  
+  
   cursor: pointer;
 }
+.done-icon:hover {
+  transform: scale(1.2);
+  opacity: .8;
+  transform: rotate(15deg);
+}
+.delete-icon:hover {
+  transform: scale(1.2);
+  opacity: .8;
+  transform: rotate(15deg);
+}
 .todo-area {
-  width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  
+
   color: #9e78cf;
   padding: 10px;
   background-color: #15101c;
   border-radius: 10px;
 }
+
 .completed {
   text-decoration: line-through;
   opacity: 0.6;

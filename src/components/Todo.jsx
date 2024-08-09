@@ -15,8 +15,8 @@ function Todo({ todo, onRemoveTodo, onToggleTodo }) {
     <div className={`todo-area ${todo.completed ? "completed" : ""}`}>
       <div>{todo.content}</div>
       <div className="todo-icons">
-        <MdDoneOutline onClick={handleToggleClick} />
-        <RiDeleteBin5Line onClick={handleRemoveClick} />
+        <MdDoneOutline className="done-icon" onClick={handleToggleClick} />
+        <RiDeleteBin5Line className="delete-icon" onClick={handleRemoveClick} />
       </div>
     </div>
   );
