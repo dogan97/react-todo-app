@@ -8,7 +8,7 @@ function TodoCreate({ onCreateTodo }) {
   const clearInput = () => {
     setNewTodo("");
   };
-  
+
   const createTodo = (event) => {
     event.preventDefault();
     if (!newTodo) return;
@@ -16,7 +16,7 @@ function TodoCreate({ onCreateTodo }) {
     const request = {
       id: Math.floor(Math.random() * 9999),
       content: newTodo,
-      completed: false
+      completed: false,
     };
     onCreateTodo(request);
     clearInput();
@@ -30,10 +30,10 @@ function TodoCreate({ onCreateTodo }) {
           type="text"
           value={newTodo}
           onChange={(e) => setNewTodo(e.target.value)}
-          placeholder="Todo Giriniz"
+          placeholder="Yeni görev girin..."
         />
         <button onClick={createTodo} className="todo-btn">
-          Todo Ekle
+          Görevi Ekle
         </button>
       </form>
     </div>
