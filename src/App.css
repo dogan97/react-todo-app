@@ -18,6 +18,11 @@
   }
 }
 
+.max-w-800 {
+  max-width: 800px;
+  margin: auto;
+}
+
 .todo-create {
   display: flex;
   flex-direction: column;
@@ -51,13 +56,13 @@
   background-color: #9e78cf;
   border-radius: 12px;
   cursor: pointer;
-  
+
   @media screen and (max-width: 375px) {
     padding: 16px;
   }
 }
 .todo-btn:hover {
-  opacity: .8;
+  opacity: 0.8;
 }
 .todo-list {
   display: flex;
@@ -74,26 +79,25 @@
   }
 }
 .todo-icons {
-display: flex;
-gap: 20px;
-@media screen and (max-width: 375px) {
-  gap: 8px;
-}
+  display: flex;
+  gap: 20px;
+  @media screen and (max-width: 375px) {
+    gap: 8px;
+  }
 }
 
-.done-icon, .delete-icon {
-  
-  
+.done-icon,
+.delete-icon {
   cursor: pointer;
 }
 .done-icon:hover {
   transform: scale(1.2);
-  opacity: .8;
+  opacity: 0.8;
   transform: rotate(15deg);
 }
 .delete-icon:hover {
   transform: scale(1.2);
-  opacity: .8;
+  opacity: 0.8;
   transform: rotate(15deg);
 }
 .todo-area {
